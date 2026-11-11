@@ -33,7 +33,7 @@ a { color: #8E2F4C; } a:hover { color: #1A1A1A; }
 
   <section id="about" data-screen-label="About" style="max-width: 1200px; margin: 0 auto; padding: clamp(40px, 6vw, 72px) clamp(20px, 5vw, 56px) clamp(72px, 9vw, 120px);">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(40px, 6vw, 72px); align-items: start;">
-      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 460px; width: 100%;">
+      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 460px; width: 100%; position: sticky; top: 96px;">
         <div onClick="{{ nextAbout }}" onKeyDown="{{ keyAbout }}" role="button" tabIndex="0" aria-label="Shuffle to next photo" style="position: relative; width: 100%; aspect-ratio: 1 / 1.05; cursor: pointer; outline: none;">
           <sc-for list="{{ photos }}" as="p" hint-placeholder-count="5">
             <div style="position: absolute; left: 2%; top: 7%; width: 72%; aspect-ratio: 4 / 5; transform-origin: 50% 60%; transform: {{ p.transform }}; z-index: {{ p.z }}; transition: transform 0.55s cubic-bezier(0.3, 0.7, 0.2, 1), box-shadow 0.3s; box-shadow: {{ p.shadow }}; background: #E4E2DB;">
